@@ -1,0 +1,23 @@
+a {
+  color: @link-color;
+  &:hover{
+    color: @link-color-hover;
+  }
+  &:active{
+    color: @link-color;
+  }
+}
+
+::-moz-selection{
+  background-color: lighten(@body-color, 50%);
+  color: @body-color;
+  text-shadow : none;
+}
+
+::selection{
+  background-color: lighten(@body-color, 50%);
+  color: @body-color;
+  text-shadow: none;
+}
+
+// swatches

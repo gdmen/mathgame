@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+// 1. ROOT 					==============================
+
+@body-color: #e7e7e7;
+@text-color: lighten(#000, 20%);//#0066cc;//darken(#6cc0e5, 30%);//#6cc0e5;
+@header-color: #0066cc;//@text-color;//darken(@text-color, 30%)
+@menu-color: #fb4f4f;//@text-color;//darken(@text-color, 30%)
+@progress-bar-color: #4ED34E;
+@incorrect-text-color: #D04343;
+
+// 2. TYPOGRAPHY 			==============================
+
+// @codefont : Monaco, Courier New, monospace;
+
+// 3. COLOR 				==============================
+
+@failure-color: rgb(218,79,73);
+@success-color: rgb(91,183,91);
+@warning-color: rgb(250,167,50);
+
+// 4. TEXTURE 				==============================
+
+// alert-error
+@alert-failure-color: lighten(@failure-color, 30%);
+@alert-failure-border: lighten(@failure-color, 10%);
+@alert-failure-text: @failure-color;
+
+// alert--success
+@alert-success-color: lighten(@success-color, 30%);
+@alert-success-border: lighten(@success-color, 10%);
+@alert-success-text: darken(@success-color, 10%);
+
+// alert--warning
+@alert-warning-color: lighten(@warning-color, 30%);
+@alert-warning-border: lighten(@warning-color, 20%);
+@alert-warning-text: darken(@warning-color, 20%);
+
+// Links
+@link-color: #0066cc;
+@link-color-hover: lighten(@link-color, 20);
+
+// Buttons
+@gradient-start: #fff;//#f7f7f7;
+@gradient-end: #f7f7f7;//#e7e7e7;
+
+// 6. LAYOUT 				==============================
+@icon-button-size: 24px;
+
+@footer-height: 3em;
+@header-footer-margin: 0.5em;

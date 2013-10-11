@@ -1,0 +1,356 @@
+#pagewrap{
+  min-height: 100%;
+  position: relative;
+}
+#non-footer{
+  padding-bottom: @footer-height + @header-footer-margin;
+  #header{
+    color: @menu-color;
+    margin-bottom: 0.25em;
+    width: 100%;
+    text-align: center;
+    hgroup{
+      position: relative;
+      #site-title{
+        float: left;
+        font-size: 2em;
+        margin: 0.25em;
+        text-transform: uppercase;
+      }
+      #admin-menu{
+        float: right;
+        font-size: 1.5em;
+        margin: 0.25em;
+        a{
+          padding: 0.25em;
+        }
+      }
+      #options{
+        float: right;
+        font-size: 1.5em;
+        margin: 0.25em;
+        a{
+          padding: 0.25em;
+        }
+      }
+    }
+  }
+  #content{
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    width: 95%;
+    .align-right{
+      text-align: right;
+    }
+    .small{
+      font-size: 0.75em;
+    }
+    #error {
+      display: block;
+      padding: 1em;
+      color: @alert-failure-text;
+      background-color: @alert-failure-color;
+      border: 1px solid @alert-failure-border;
+    }
+    #success {
+      margin:5px;
+      color: @alert-success-text;
+      background-color: @alert-success-color;
+      border: 1px solid @alert-success-border;
+    }
+    #progress{
+      border: 1px solid @text-color;
+      .border-radius(1.5em);
+      height: 3em;
+      margin: 0 auto;
+      width: 98%;
+      #bar{
+        background-color: @progress-bar-color;
+        .border-radius(1.5em);
+        .gradient-vertical(lighten(@progress-bar-color, 25%), @progress-bar-color);
+        height: 100%;
+      }
+    }
+    #regbox{
+      .text-base();
+      padding: 1em;
+      border-radius: 0em;
+      background-image: none;
+      display: inline-block;
+      font-size: 1em;
+      margin: 0 auto;
+      margin-top: 5em;
+      input{
+        color: @header-color;
+        background-color: white;
+        border: 1px solid @text-color;
+        .border-radius();
+        margin-bottom: 0.25em;
+        text-align: left;
+        padding: 0.125em;
+      }
+      .submit{
+        .button();
+        margin: 0 auto;
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        text-transform: uppercase;
+      }
+    }
+    #menu{
+      margin-top: 5em;
+      #greeting{
+        font-size: 3em;
+      }
+      a{
+        .button();
+        font-size: 2em;
+        margin: 0 auto;
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        text-transform: uppercase;
+        width: 10em;
+      }
+      form{
+        margin: 0 auto;
+        text-align: center;
+        width: 750px;
+        input{
+          background-color: white;
+          border: 1px solid @header-color;
+          color: @header-color;
+          .border-radius(); 
+          font-size: 2em;
+          text-align: center;
+        }
+        #submit{
+          .button();
+          color: @header-color;
+          display: inline;
+          margin: 0 auto;
+          margin-top: 1em;
+          padding: 0.5em 1em;
+          text-transform: uppercase;
+        }
+      }
+      #add_video{
+        input[type="text"]{
+          float: left;
+          margin-bottom: 0.5em;
+          text-align: left;
+          width: 100%;
+        }
+        label{
+          float: left;
+          text-align: left;
+          width: 20%;
+        }
+      }
+      #settings{
+        #solve_number{
+          width: 100%;
+          input{
+            float: left;
+            margin-left: 0.5em;
+          }
+          label{
+            float: left;
+            font-size: 2em;
+          }
+        }
+        .subform{
+          margin-top: 2em;
+          width: 100%;
+          input{
+            width: 2em;
+            &.min_answer,
+            &.max_answer{
+              width: 4em;
+            }
+          }
+          .toggle{
+            text-transform: capitalize;
+          }
+          .equation-container{
+            width: 100%;
+            .equation{
+              float: left;
+              font-size: 4em;
+              width: 17%;
+            }
+            #answer{
+              width: 32%;
+            }
+          }
+          .inputs{
+            width: 100%;
+            input{
+              margin-top: 0.125em;
+              width: 35%;
+              &.left_col{
+                margin-right: 10%;
+              }
+              &.right_col{
+                float: right;
+              }
+            }
+            label{
+              font-size: 1.5em;
+              width: 5%;
+            }
+          }
+        }
+      }
+    }
+    #statistics{
+      #highlight{
+        font-size: 1.125em;
+        padding: 1em;
+        .number{
+          color: @header-color;
+        }
+      }
+      #tables{
+        .list-table{
+          border-collapse: collapse;
+          display: inline-block;
+          td{
+            background-color: #fff;
+            border: 1px solid @header-color;
+            padding: 0.125em;
+          }
+          th{
+            background-color: @header-color;
+            border-left: 1px solid #fff;
+            color: #fff;
+            font-size: 1.1em;
+            padding: 0.25em;
+            &.title{
+              border-bottom: 1px solid #fff;
+              border-left: none;
+              border-top: 1px solid @header-color;
+            }
+            &:first-child{
+              border-left: 1px solid @header-color;
+            }
+            &:last-child{
+              border-right: 1px solid @header-color;
+            }
+          }
+          &#difficult-problems{
+            th{
+              background-color: lighten(@failure-color, 10%);
+            }
+          }
+          &#easy-problems{
+            th{
+              background-color: lighten(@success-color, 10%);
+            }
+          }
+        }
+      }
+      #graphs{
+        div{
+          margin-top: 1em;
+        }
+        #row{
+          margin-top: 0;
+          div{
+            display: inline-block;
+            margin: 0 auto;
+            margin-top: 0.5em;
+            min-width: 47.5%;
+            &#operators{
+              margin-left: 0.75em;
+            }
+          }
+        }
+      }
+    }
+    #not-correct{
+      color: @incorrect-text-color;
+      font-size: 3em;
+      height: 1em;
+      margin: 0 auto;
+      margin-bottom: -2.5em;
+      margin-top: 1.5em;
+      text-align: center;
+      width: 900px;
+      #number{
+        color: @text-color;
+      }
+    }
+    #problem{
+      color: @text-color;
+      margin: 0 auto;
+      margin-top: 10em;
+      text-align: center;
+      width: 900px;
+      .equation{
+        float: left;
+        font-size: 8em;
+        width: 17%;
+      }
+      .submit{
+        .button();
+        font-size: 2em;
+        margin: 0 auto;
+        padding: 0.5em 1em;
+        text-transform: uppercase;
+        width: 4em;
+      }
+      input{
+        color: @text-color;
+      }
+      #operator{
+      }
+      #answer{
+        text-align: center;
+        width: 32%;
+        border-bottom: 2px solid @body-color;
+      }
+      #input_answer{
+        border-bottom: 2px solid @text-color;
+        text-align: center;
+        width: 32%;
+      }
+    }
+    #reward{
+      margin-top: 3em;
+      a{
+        .button();
+        font-size: 2em;
+        margin: 0 auto;
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        text-transform: uppercase;
+        width: 20em;
+      }
+      #video_wrapper{
+        margin: 0 auto;
+        width: 1200px;
+      }
+    }
+    #graphs{
+      margin: 0 auto;
+      text-align: center;
+      width: 90%;
+      #graphs_scroll{
+        height: 625px;
+        overflow-x:auto;
+        white-space: nowrap;
+        width: 100%;
+      }
+    }
+  }
+}
+#footer{
+  height: @footer-height;
+  margin-top: -1 * @footer-height;
+  position: relative;
+  text-align: center;
+  p{
+    padding-top: @footer-height / 3;
+  }
+}

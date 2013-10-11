@@ -1,0 +1,39 @@
+.round-icon-button(@diameter: 12px,
+        @background-color-start: @gradient-start,
+        @background-color-end: @gradient-end,
+        @color: @text-color){
+  background-color: @background-color-start;
+  .border-radius(50%);
+  color: @color;
+  cursor: pointer;
+  font-family: 'fontello';
+  font-style: normal;
+  font-size: @diameter;
+  .gradient-vertical(@background-color-start, @background-color-end);
+  padding: @diameter / 4;
+  padding-bottom: @diameter / 8;
+  line-height: @diameter;
+  speak: none;
+  text-align: center;
+  text-decoration: none;
+  width: @diameter;
+  &:hover{
+    color: lighten(@color, 50%);
+    text-decoration: none;
+  }
+}
+
+.button(@background-color-start: @gradient-start,
+        @background-color-end: @gradient-end,
+        @color: @text-color){
+  .text-base(@background-color-start, @background-color-end, @color);
+  cursor: pointer;
+  position: relative;
+  &:active{
+  }
+  &:hover{
+    background-image: none;
+    color: darken(@color, 20%);
+    cursor: pointer;
+  }
+}
