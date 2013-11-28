@@ -17,7 +17,7 @@ if(!isUserLoggedIn()){
     foreach ($videos as $title=>$video){
       echo $video['id'];
   ?>
-      <div class="video" id="<?php echo $video['id'];?>" title="<?php echo $title; ?>" yt_id="<?php echo $video['youtube_id']; ?>" start="<?php echo $video['start']; ?>" end="<?php echo $video['end']; ?>"></div>
+      <div  class="video" id="<?php echo $video['id'];?>" title="<?php echo $title; ?>" yt_id="<?php echo $video['youtube_id']; ?>" start="<?php echo $video['start']; ?>" end="<?php echo $video['end']; ?>"></div>
   <?php
     }
   ?>
