@@ -4,7 +4,7 @@ The Math Game
 A simple math app with youtube video rewards.
 
 To use:
-  - Create database table from schema in setup/
+  - Create database from schema in setup/
   - Populate database with problems using populate_problems.php in setup/
   - Configure and rename 'models/db-settings.php_'
 
